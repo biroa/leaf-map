@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/leaflet.css">
+    <link rel="stylesheet" href="css/leaflet.awesome-markers.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+
+    <script src="js/leaflet.js"></script>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/leaflet.awesome-markers.js"></script>
+    <script src="js/bootstrap.min.js" crossorigin="anonymous"></script>
+    <script src="js/run_prettify.js"></script>
+    <script src="js/custom.js"></script>
+
+
+    <style type="text/css">
+        #map {
+            width: 100%;
+            height: 400px;
+        }
+    </style>
+</head>
+
+<body>
+<!-- container -->
+<div class="conttainer">
+    <!-- This is new -->
+    <div class="card text-white">
+        <div id="map">
+            <div class="float-right position-relative mt-10 mr-10" style="z-index: 1001"> <!-- Use 401 to be between map and controls -->
+                <div class="mt-2 mr-2">
+                    <a href="#" class="btn btn-outline-secondary btn-block" data-toggle="modal" data-target="#fileUploadModal">Upload GeoJson file</a>
+                </div>
+                <div class="mt-2 mr-2">
+                    <a href="#" class="btn btn-outline-secondary btn-block">Lasso</a>
+                </div>
+                <div class="mt-2 mr-2">
+                    <a href="#" class="btn btn-outline-secondary btn-block" data-toggle="modal" data-target="#colorPickerModal">Change Icon Colors</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Output -->
+<pre class="prettyprint" id="list"></pre>
+<!-- File Upload Modal -->
+<div class="modal fade" id="fileUploadModal" tabindex="-1" role="dialog" aria-labelledby="fileUploadModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="fileUploadModalLabel">File Selection</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="files">Please select a Json file</label>
+                        <input type="file" id="files" class="form-control-file" name="file" accept="application/json">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- File Upload Modal -->
+<div class="modal fade" id="colorPickerModal" tabindex="-1" role="dialog" aria-labelledby="colorPickerModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="colorPickerModalLabel">Color Selection</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="colorInput">Please select a color</label>
+                        <select id="colorInput" class="form-control">
+                            <option value="red">red</option>
+                            <option value="darkred">darkred</option>
+                            <option value="orange">orange</option>
+                            <option value="green">green</option>
+                            <option value="darkgreen">darkgreen</option>
+                            <option value="blue">blue</option>
+                            <option value="purple">purple</option>
+                            <option value="darkpurple">darkpurple</option>
+                            <option value="cadetblue">cadetblue</option>
+
+                        </select>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+
+</html>

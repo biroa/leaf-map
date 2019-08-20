@@ -1,0 +1,56 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Gimme! Coffee",
+        "business-type": "Cafe",
+        "description": "Gimme espresso bars are found in New York City and Upstate New York.",
+        "text-color": "#e50865",
+        "marker-color": "#3f3bac",
+        "marker-size": "medium",
+        "marker-symbol": ""
+
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-76.499491, 42.444508]
+      }
+    }, {
+      "type": "Feature",
+      "properties": {
+        "Name": "ZevRoss Spatial Analysis",
+        "business-type": "Data analysis and mapping",
+        "description": "Specializes in spatial and environmental data analysis and statistics, geographic information systems and custom data design.",
+        "text-color": "",
+        "marker-color": "#3f3bac",
+        "marker-size": "medium",
+        "marker-symbol": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-76.4958259, 42.440258]
+      }
+    }, {
+      "type": "Feature",
+      "properties": {
+        "Name": "Argos Inn",
+        "business-type": "Inn and Bar",
+        "description": "Inn and cocktail bar in a beautifully restored historic mansion.",
+        "marker-color": "#3f3bac",
+        "marker-size": "medium",
+        "marker-symbol": ""
+
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-76.492543, 42.439401]
+      }
+    }
+
+
+  ]
+
+}
